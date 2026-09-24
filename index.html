@@ -6,6 +6,7 @@
   <title>BOUTIQUE EMNAY | Tienda de ropa</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/mobile-checkout.css">
 </head>
 <body>
   <header class="header">
@@ -20,6 +21,8 @@
         <a href="#contacto">Contacto</a>
       </nav>
       <button id="cartButton" class="cart-btn">🛒 Carrito <span id="cartCount">0</span></button>
+
+
     </div>
   </header>
 
@@ -89,10 +92,12 @@
         <strong id="cartTotal">$0.00</strong>
       </div>
       <button id="whatsappButton" class="btn full">Pedir por WhatsApp</button>
+      <button id="stripeCheckoutButton" class="btn full stripe-btn" type="button">Pagar con Stripe</button>
       <button id="clearCart" class="btn secondary full">Vaciar carrito</button>
     </div>
   </div>
 
   <script src="js/app.js"></script>
+  <script src="js/stripe-checkout.js"></script>
 </body>
 </html>
