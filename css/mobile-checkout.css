@@ -1,0 +1,82 @@
+
+/* ===== BOUTIQUE EMNAY — Ajustes móviles y checkout ===== */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+img { max-width: 100%; height: auto; }
+
+.stripe-checkout-wrap {
+  margin: 12px 0 8px;
+}
+#stripeCheckoutButton {
+  width: 100%;
+  min-height: 50px;
+  border: 0;
+  border-radius: 14px;
+  padding: 12px 18px;
+  background: #7a3e4d;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(122,62,77,.18);
+}
+#stripeCheckoutButton:hover { background: #c96f85; }
+#stripeCheckoutButton:disabled { opacity: .65; cursor: wait; }
+
+@media (max-width: 768px) {
+  .container { width: min(94%, 1120px); }
+  header { padding: 10px 0; }
+  header .container, .header-inner {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  nav {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding-bottom: 4px;
+  }
+  nav a { display: inline-block; padding: 8px 10px; }
+  .hero, .hero-content { min-height: auto; }
+  .products, .product-grid, .catalogo, .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+  .product-card, .card {
+    min-width: 0;
+    overflow: hidden;
+  }
+  .product-card img, .card img {
+    width: 100%;
+    aspect-ratio: 1 / 1.12;
+    object-fit: cover;
+  }
+  button, .btn, input, select, textarea {
+    max-width: 100%;
+  }
+  .cart, #cartPanel, .cart-panel {
+    width: min(94vw, 420px) !important;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .products, .product-grid, .catalogo, .grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+  .product-card h3, .card h3 { font-size: 15px; }
+  .product-card p, .card p { font-size: 14px; }
+  .product-card button, .card button {
+    width: 100%;
+    min-height: 42px;
+    padding: 9px 8px;
+  }
+  #cartButton { min-height: 44px; }
+  footer { text-align: center; }
+}
+
+.stripe-btn{margin-top:10px;background:#7a3e4d;}
+@media(max-width:480px){.modal-card{width:94vw!important;max-height:90vh;overflow:auto;padding:16px!important}.stripe-btn,.modal-card .full{min-height:48px;font-size:15px}.cart-item{gap:8px}.cart-item img{width:62px!important;height:62px!important;object-fit:cover}}
